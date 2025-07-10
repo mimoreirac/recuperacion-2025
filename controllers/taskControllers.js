@@ -6,6 +6,10 @@ function getTasks(req, res) {
 
 function addTasks(req, res) {
   const { id, title, description, completed, priority } = req.body;
+  const taskExists = Tasks.find((task) => task.id == id);
+  if (taskExists) {
+    return res.status(400).json({ message: "El id ya existe" });
+  }
   if (priority < 1 || priority > 5) {
     return res
       .status(400)

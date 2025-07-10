@@ -59,4 +59,20 @@ describe("API de Tareas Avanzadas", () => {
     expect(res.status).toBe(200);
     expect(res.body).toHaveProperty("percentageCompleted");
   });
+
+  it("Debe chequear que el id de una tarea no se repita", async () => {
+    const res = await request(app).post("/tasks").send({
+      id: 1,
+      title: "Primera tarea",
+      description: "Esta es la descripción",
+      priority: 3,
+    });
+    const res2 = await request(app).post("/tasks").send({
+      id: 1,
+      title: "Primera tarea",
+      description: "Esta es la descripción",
+      priority: 3,
+    });
+    expect(res2.status).toBe(400);
+  });
 });
