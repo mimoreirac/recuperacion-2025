@@ -1,0 +1,30 @@
+{
+  "name": "recuperacion-2025",
+  "version": "1.0.0",
+  "description": "Esta actividad de recuperación tiene como objetivo reforzar tus conocimientos de **Backend con Node.js y Express**, usando la arquitectura **MVC**, validaciones de datos y pruebas automáticas.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mimoreirac/recuperacion-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/mimoreirac/recuperacion-2025/issues"
+  },
+  "homepage": "https://github.com/mimoreirac/recuperacion-2025#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3",
+    "vitest": "^3.2.4"
+  }
+}
